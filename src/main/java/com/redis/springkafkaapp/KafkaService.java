@@ -15,7 +15,7 @@ public class KafkaService {
         kafkaTemplate.send("topic1", "message sent (topic1)");
     }
 
-    @KafkaListener(topics = "topic1", groupId = "testgroup")
+//    @KafkaListener(topics = "topic1", groupId = "testgroup")
     public void consume(String message) {
         System.out.println("consumed: "+message);
     }
